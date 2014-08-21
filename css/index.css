@@ -5958,6 +5958,9 @@ button.has-icon-small .icon,
   }
 }
 /* ************ TEMPLATE STYLES ************ */
+p {
+  margin: 0;
+}
 /* ******* COMPONENTS ******* */
 /* ******* STRUCTURE ******* */
 .header,
