@@ -5979,6 +5979,7 @@ button.has-icon-small .icon,
 }
 .header > .inner {
   padding: 24px 0;
+  border-bottom: 2px solid #cbcbcb;
 }
 .header > .inner .title {
   font: 300 30px/38px 'Open Sans', 'Open Sans', arial, helvetica, sans-serif;
@@ -5987,6 +5988,9 @@ button.has-icon-small .icon,
 /* ******* CONTENT ******* */
 .content {
   z-index: 2;
+}
+.content > .inner {
+  padding: 24px 0;
 }
 /* *** COLS *** */
 .content-cols > .l,
