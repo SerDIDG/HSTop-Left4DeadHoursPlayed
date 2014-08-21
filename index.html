@@ -7,8 +7,6 @@
 
     <link type="text/css" rel="stylesheet" href="css/index.css">
 
-    <script type="text/javascript" src="https://apis.google.com/js/auth.js?onload=init"></script>
-
     <script type="text/javascript" src="libs/common/js/polyfill.js"></script>
     <script type="text/javascript" src="libs/common/js/common.js"></script>
     <script type="text/javascript" src="libs/common/js/modules.js"></script>
@@ -21,8 +19,6 @@
 
     <script type="text/javascript">
         cm.onLoad(function(){
-            gapi.load('auth', init);
-
             new Com.Collector()
                 .add('counter', function(node){
                     new Tpl.Counter({
