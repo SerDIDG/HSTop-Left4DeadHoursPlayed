@@ -13,7 +13,6 @@ Tpl.Callback = {
     },
     'videosL4D' : function(resplonse){
         Tpl.Config['videosL4D'] = resplonse['data']['totalItems'];
-        cm.log(resplonse['data']['items'][0]['video']['uploaded']);
         Tpl.Config['lastL4D'] = new Date(resplonse['data']['items'][0]['video']['uploaded']);
     }
 };
@@ -40,7 +39,6 @@ function(params){
     };
 
     var render = function(){
-        console.dir(Tpl.Config);
         var h = Math.floor(((Tpl.Config['lastL4D'] - Tpl.Config['firstL4D']) / 1000 / 60 / 60 / Tpl.Config['videosL4D']) * ((100 / Tpl.Config['videosAll']) * Tpl.Config['videosL4D']));
         // Structure
         that.nodes['container'] = cm.Node('div',
