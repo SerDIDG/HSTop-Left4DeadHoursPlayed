@@ -19,10 +19,17 @@ function(params){
     };
 
     var get = function(){
+        var oauthToken = gapi.auth.getToken();
+
         var req = cm.ajax({
             'type' : 'json',
             'method' : 'get',
-            'url' : 'https://gdata.youtube.com/feeds/api/users/guide4left/uploads?v=2&alt=json',
+            'url' : 'https://gdata.youtube.com/feeds/api/users/guide4left/uploads',
+            'params' : cm.obj2URI({
+                'access_token' : oauthToken.access_token,
+                'v' : 2,
+                'alt' : 'json'
+            }),
             'withCredentials' : true,
             'handler' : render
         });
