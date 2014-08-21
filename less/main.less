@@ -1,0 +1,125 @@
+/* ************ TEMPLATE STYLES ************ */
+
+/* ******* COMPONENTS ******* */
+
+/* ******* STRUCTURE ******* */
+
+.header,
+.content,
+.footer {
+    position: relative;
+    padding: 0 @cm-indentMedium;
+}
+
+.inner {
+    .header > &,
+    .content > &,
+    .footer > & {
+        max-width: 1000px;
+        margin: 0 auto;
+        position: relative;
+    }
+}
+
+/* ******* HEADER ******* */
+
+.header {
+    z-index: 3;
+
+    > .inner {
+        padding: @cm-indentMedium 0;
+
+        .title {
+            .cm-font-title;
+        }
+    }
+}
+
+/* ******* CONTENT ******* */
+
+.content {
+    z-index: 2;
+
+    > .inner {
+    }
+}
+
+/* *** COLS *** */
+
+.content-cols {
+    > .l, > .c, > .r {
+        min-height: @cm-Medium;
+        float: left;
+    }
+
+    &.one {
+        > .c {
+            width: auto;
+            float: none;
+        }
+    }
+
+    &.two {
+        > .c {
+        }
+
+        > .r {
+        }
+    }
+
+    &.three {
+        > .l {
+        }
+
+        > .c {
+        }
+
+        > .r {
+        }
+    }
+}
+
+/* ******* FOOTER ******* */
+
+.footer {
+    > .inner {
+    }
+}
+
+/* ******* ADAPTIVE ******* */
+
+@media only screen and (max-width : @cm-screenTablet) {
+
+
+
+}
+
+@media only screen and (max-width : @cm-screenTabletPortrait) {
+
+
+
+}
+
+@media only screen and (max-width : @cm-screenMobile) {
+
+    html.is-adaptive {
+        .content-cols {
+            > .l, > .c, > .r {
+                min-height: 0;
+                float: none;
+                margin: @cm-indentMedium 0 0 0;
+
+                &:first-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width : @cm-screenMobilePortrait) {
+
+
+
+}

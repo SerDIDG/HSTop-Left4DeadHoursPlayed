@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html class="is-adaptive">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>HS Top Left4Dead Played Hours Counter<</title>
+
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+
+    <script type="text/javascript" src="libs/common/js/polyfill.js"></script>
+    <script type="text/javascript" src="libs/common/js/common.js"></script>
+    <script type="text/javascript" src="libs/common/js/modules.js"></script>
+    <script type="text/javascript" src="libs/common/js/parts.js"></script>
+    <script type="text/javascript" src="libs/common/js/init.js"></script>
+    <script type="text/javascript" src="libs/common/js/components/UA.js"></script>
+    <script type="text/javascript" src="libs/common/js/components/Collector.js"></script>
+
+    <script type="text/javascript" src="js/template.js"></script>
+
+    <script type="text/javascript">
+        cm.onReady(function(){
+            new Com.Collector()
+                .add('counter', function(node){
+                    new Tpl.Counter({
+                        'node' : node
+                    });
+                })
+                .construct();
+        });
+    </script>
+</head>
+
+<body>
+
+<!-- [* ******* HEADER START ******* *] -->
+
+<div class="header">
+    <div class="inner">
+        <div class="title">HS Top Left4Dead Played Hours Counter</div>
+    </div>
+</div>
+
+<!-- [* ******* HEADER END ******* *] -->
+
+<!-- [* ******* CONTENT START ******* *] -->
+
+<div class="content">
+    <div class="inner">
+        <div data-element="counter"></div>
+    </div>
+</div>
+
+<!-- [* ******* CONTENT END ******* *] -->
+
+<!-- [* ******* FOOTER START ******* *] -->
+
+<div class="footer">
+    <div class="inner">
+
+    </div>
+</div>
+
+<!-- [* ******* FOOTER END ******* *] -->
+
+</body>
+</html>
