@@ -6004,6 +6004,10 @@ button.has-icon-small .icon,
   float: none;
 }
 /* ******* FOOTER ******* */
+.footer > .inner {
+  padding: 24px 0;
+  border-top: 2px solid #cbcbcb;
+}
 /* ******* ADAPTIVE ******* */
 @media only screen and (max-width: 640px) {
   html.is-adaptive .content-cols > .l,
