@@ -12,8 +12,14 @@ Tpl.Callback = {
         Tpl.Config['videosAll'] = resplonse['data']['totalItems'];
     },
     'videosL4D' : function(resplonse){
+        var date = new Date();
+
         Tpl.Config['videosL4D'] = resplonse['data']['totalItems'];
-        Tpl.Config['lastL4D'] = new Date(resplonse['data']['items'][0]['video']['uploaded']);
+        if((date = new Date(resplonse['data']['items'][0]['video']['uploaded']))&& date.getFullYear() > 2008){
+            Tpl.Config['lastL4D'] = date;
+        }else{
+            Tpl.Config['lastL4D'] = new Date(resplonse['data']['items'][1]['video']['uploaded']);
+        }
     }
 };
 
